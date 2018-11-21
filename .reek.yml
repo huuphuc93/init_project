@@ -1,21 +1,7 @@
 detectors:
   IrresponsibleModule:
     enabled: false
-  NestedIterators:
-    exclude:
-      - "MyWorker#self.class_method"
-      - "AnotherWorker#instance_method"
-  DataClump:
-    max_copies: 3
-    min_clump_size: 3
-directories:
-  "SUS_System/app/controllers":
-    NestedIterators:
-      enabled: false
-  "SUS_System/app/helpers":
-    UtilityFunction:
-      enabled: false
+
 exclude_paths:
-  - lib/legacy
-  - lib/rake/legacy_tasks
-  - lib/smelly.rb
+  - 'vendor'
+  - 'db/migrate'
